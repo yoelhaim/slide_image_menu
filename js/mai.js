@@ -9,7 +9,9 @@ if (chechCol !== null) {
   document.querySelectorAll(".colors li").forEach((el) => {
     el.classList.remove("active");
     if (el.dataset.color === chechCol) {
-      el.classList.add("active");
+      if (el.dataset.color !== "rgba(0, 0, 0, 0.507)") {
+        el.classList.add("active");
+      }
     }
   });
 }
